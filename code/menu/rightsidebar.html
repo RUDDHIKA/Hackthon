@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Side Navigation - Bootsnipp.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            background: #eeeeee;
+        }
+        
+        a,
+        a:hover,
+        a:active {
+            text-decoration: none;
+        }
+        
+        a {
+            color: #008DE7;
+            font-style: italic;
+            font-weight: 700;
+        }
+        
+        a:hover {
+            transition: all 200ms ease-in-out;
+        }
+        
+        .sidebar-menu {
+            position: fixed;
+            float: left;
+            width: 280px;
+            top: 75px;
+            right: 0;
+            bottom: 0;
+            background-color: #303641;
+            color: #aaabae;
+            font-family: "Segoe UI";
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        #menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        #menu li {
+            position: relative;
+            margin: 0;
+            font-size: 12px;
+            border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+            padding: 0;
+        }
+        
+        #menu li ul {
+            opacity: 0;
+            height: 0px;
+        }
+        
+        #menu li a {
+            font-style: normal;
+            font-weight: 400;
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            color: #aaabae;
+            white-space: nowrap;
+            z-index: 2;
+        }
+        
+        #menu li a:hover {
+            color: #ffffff;
+            background-color: #333944;
+            transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+        }
+        
+        #menu li.active>a {
+            background-color: #2b303a;
+            color: #ffffff;
+        }
+        
+        #menu ul li {
+            background-color: #2b303a;
+        }
+        
+        #menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #menu li ul {
+            position: absolute;
+            visibility: hidden;
+            right: 100%;
+            top: -1px;
+            background-color: #2b303a;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.1s linear;
+            border-top: 1px solid rgba(69, 74, 84, 0.7);
+        }
+        
+        #menu li:hover>ul {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        #menu li li ul {
+            right: 100%;
+            visibility: hidden;
+            top: -1px;
+            opacity: 0;
+            transition: opacity 0.1s linear;
+        }
+        
+        #menu li li:hover ul {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        #menu .fa {
+            margin-right: 5px;
+        }
+        
+        input[type=text] {
+            width: 32%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid red;
+            border-radius: 3px;
+        }
+        
+        .sidebar-icon {
+            position: relative;
+            float: right;
+            margin-top: 32px;
+            border: 1px solid #00001c;
+            text-align: center;
+            line-height: 1;
+            font-size: 18px;
+            padding: 6px 8px;
+            border-radius: 3px;
+            color: #eeeeee;
+            background-clip: padding-box;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        .fa-html5 {
+            color: #fff;
+            margin-left: 50px;
+        }
+        
+        .heading {
+            color: black;
+            font-size: 10px;
+        }
+        
+        .button {
+            background-color: cyan;
+            border: none;
+            color: blue;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 4px;
+            cursor: pointer;
+        }
+        
+        .texter {
+            color: green;
+        }
+        
+        .col {
+            color: ghostwhite;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar-menu">
+        </a>
+        </header>
+        <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+        <div class="menu">
+            <ul id="menu">
+
+                <div class=" col text-center">
+                    <h2> FIlter</h2>
+                </div>
+
+                <div class="heading">
+                    <form method="POST" action="cluster9.php">
+                        <lable>
+                            <h4>FROM/ON</h4>
+                        </lable><br>
+                        <input type="text" name="day1" placeholder="Day..">
+                        <input type="text" name="month1" placeholder="Month..">
+                        <input type="text" name="year1" placeholder="year..">
+                        <br>
+                        <lable>
+                            <h4>TO(for range)</h4>
+                        </lable><br>
+                        <input type="text" name="day2" placeholder="Day..">
+                        <input type="text" name="month2" placeholder="Month..">
+                        <input type="text" name="year2" placeholder="year..">
+                        <br>
+                        <input type="text" name="mag" placeholder="Magnitude..">
+                        <br>
+                        <input type="submit" class="button" value="Submit">
+                    </form>
+                </div>
+                <script type="text/javascript">
+                    var toggle = true;
+
+                    $(".sidebar-icon").click(function() {
+                        if (toggle) {
+                            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                            $("#menu span").css({
+                                "position": "absolute"
+                            });
+                        } else {
+                            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                            setTimeout(function() {
+                                $("#menu span").css({
+                                    "position": "relative"
+                                });
+                            }, 400);
+                        }
+
+                        toggle = !toggle;
+
+                    });
+                </script>
+</body>
+
+</html>
